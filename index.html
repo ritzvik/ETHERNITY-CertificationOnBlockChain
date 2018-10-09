@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+<script src="./index.js"></script>
+
+<head>
+  <title>Ethernity DApp</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+</head>
+
+<body class="container" onLoad="injected()">
+  <div id="current"></div>
+  <a href="#" onclick="currentAccount()" class="btn btn-primary">Current Account Logged In</a>
+
+  <div id="NAME"></div>
+  <input type="text" id="field_getName" />
+  <a href="#" onclick="getName()", class="btn btn-primary">get Name</a>
+
+  <div id="issuerStatus"></div>
+  <input type="text" id="field_isIssuer" />
+  <a href="#" onclick="isIssuer()", class="btn btn-primary">Is Issuer</a>
+
+  <div id="recipientStatus"></div>
+  <input type="text" id="field_isRecipient" />
+  <a href="#" onclick="isRecipient()", class="btn btn-primary">Is Recipient</a>
+
+  <div id="certificateHash"></div>
+  <input type="text" id="field1_getCertificateHash" />
+  <input type="text" id="field2_getCertificateHash" />
+  <input type="number" step="1" id="field3_getCertificateHash" />
+  <a href="#" onclick="getCertificateHash()", class="btn btn-primary">Get Certificate</a>
+
+  <div id="currentNonce"></div>
+  <input type="text" id="field1_currentNonce" />
+  <input type="text" id="field2_currentNonce" />
+  <a href="#" onclick="currentNonce()", class="btn btn-primary">Current Nonce</a>
+
+  <hr>
+
+  <div></div>
+  <input type="text" id="field_linkIssuerName" />
+  <a href="#" onclick="linkIssuerName()", class="btn">Link Issuer Name</a>
+
+  <div></div>
+  <input type="text" id="field_linkRecipientName" />
+  <a href="#" onclick="linkRecipientName()", class="btn">Link Recipient Name</a>
+
+  <div></div>
+  <input type="text" id="field1_registerHash" />
+  <input type="number" step="1" id="field2_registerHash" />
+  <a href="#" onclick="registerHash()", class="btn">Register Certificate Hash</a>
+
+
+</body>
+
+</html>

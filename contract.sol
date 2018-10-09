@@ -38,7 +38,7 @@ contract Ethernity {
     {
       forwardFunds(msg.sender);
     }
-    issuerNameLinked(msg.sender,_name);
+    emit issuerNameLinked(msg.sender,_name);
     return true;
   }
 
@@ -52,7 +52,7 @@ contract Ethernity {
     {
       forwardFunds(msg.sender);
     }
-    recipientNameLinked(msg.sender,_name);
+    emit recipientNameLinked(msg.sender,_name);
     return true;
   }
 
@@ -62,7 +62,7 @@ contract Ethernity {
     {
       forwardFunds(msg.sender);
     }
-    dataLinked(msg.sender, _data);
+    emit dataLinked(msg.sender, _data);
     return true;
   }
 
@@ -94,14 +94,14 @@ contract Ethernity {
     if (msg.value > 0) {
       forwardFunds(_receiver);
     }
-    var current_nonce = hashNonce[msg.sender][_receiver];
+    uint256 current_nonce = hashNonce[msg.sender][_receiver];
     hashStore[msg.sender][_receiver][current_nonce] = _hash;
     hashNonce[msg.sender][_receiver] = current_nonce+1;
 
     if (recipientActive[_receiver]==false) {
       recipientActive[_receiver]=true;
     }
-    newIssue(msg.sender, _receiver, hashNonce[msg.sender][_receiver]);
+    emit newIssue(msg.sender, _receiver, hashNonce[msg.sender][_receiver]);
     return true;
   }
 
@@ -121,7 +121,7 @@ contract Ethernity {
       {
         forwardFunds(msg.sender);
       }
-      permissionToChangeGranted( _issuer, msg.sender, _certificateNonce+1, _permission);
+      emit permissionToChangeGranted( _issuer, msg.sender, _certificateNonce+1, _permission);
       return _permission;
     }
   }
@@ -139,7 +139,7 @@ contract Ethernity {
       {
         forwardFunds(_receiver);
       }
-      newIssue(msg.sender, _receiver, _certificateNonce+1 );
+      emit newIssue(msg.sender, _receiver, _certificateNonce+1 );
       return true;
     }
   }
