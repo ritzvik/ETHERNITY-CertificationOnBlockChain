@@ -16,41 +16,41 @@
   <a href="#" onclick="currentAccount()" class="btn btn-primary">Current Account Logged In</a>
 
   <div id="NAME"></div>
-  <input type="text" id="field_getName" />
+  <input type="text" id="field_getName" placeholder="eth address" />
   <a href="#" onclick="getName()", class="btn btn-primary">get Name</a>
 
   <div id="issuerStatus"></div>
-  <input type="text" id="field_isIssuer" />
+  <input type="text" id="field_isIssuer" placeholder="eth address" />
   <a href="#" onclick="isIssuer()", class="btn btn-primary">Is Issuer</a>
 
   <div id="recipientStatus"></div>
-  <input type="text" id="field_isRecipient" />
+  <input type="text" id="field_isRecipient" placeholder="eth address" />
   <a href="#" onclick="isRecipient()", class="btn btn-primary">Is Recipient</a>
 
   <div id="certificateHash"></div>
-  <input type="text" id="field1_getCertificateHash" />
-  <input type="text" id="field2_getCertificateHash" />
-  <input type="number" step="1" id="field3_getCertificateHash" />
+  <input type="text" id="field1_getCertificateHash" placeholder="issuer address" />
+  <input type="text" id="field2_getCertificateHash" placeholder="reciever address" />
+  <input type="number" step="1" id="field3_getCertificateHash" placeholder="certificate nonce" />
   <a href="#" onclick="getCertificateHash()", class="btn btn-primary">Get Certificate</a>
 
   <div id="currentNonce"></div>
-  <input type="text" id="field1_currentNonce" />
-  <input type="text" id="field2_currentNonce" />
+  <input type="text" id="field1_currentNonce" placeholder="issuer address" />
+  <input type="text" id="field2_currentNonce" placeholder="reciever address" />
   <a href="#" onclick="currentNonce()", class="btn btn-primary">Current Nonce</a>
 
   <hr>
 
   <div></div>
-  <input type="text" id="field_linkIssuerName" />
+  <input type="text" id="field_linkIssuerName" placeholder="Name Eg : John Doe" />
   <a href="#" onclick="linkIssuerName()", class="btn">Link Issuer Name</a>
 
   <div></div>
-  <input type="text" id="field_linkRecipientName" />
+  <input type="text" id="field_linkRecipientName" placeholder="Name Eg : John Doe" />
   <a href="#" onclick="linkRecipientName()", class="btn">Link Recipient Name</a>
 
   <div></div>
-  <input type="text" id="field1_registerHash" />
-  <input type="number" step="1" id="field2_registerHash" />
+  <input type="text" id="field1_registerHash" placeholder="reciever address" />
+  <input type="number" step="1" id="field2_registerHash" placeholder="Hash Value" />
   <a href="#" onclick="registerHash()", class="btn">Register Certificate Hash</a>
 
 
