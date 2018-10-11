@@ -12,4 +12,4 @@ Smart contract is hosted at ropsten network at address 0xA126124825Bbe39381eDE8c
 #### Issuer account has to be first registered by using the button 'Link Issuer Name' in index.html to start issuing certificates.
 #### Many functions are not implemented on the fron-end but available in the samrtcontract.
 
- => A working webpage is hosted on students.iitmandi.ac.in/~b16110/ethernity/
+ => A working webpage is hosted on http://students.iitmandi.ac.in/~b16110/ethernity/
